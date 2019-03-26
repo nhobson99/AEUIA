@@ -1,0 +1,167 @@
+// Save File for STEM
+// Version 1.00
+
+// State Format: name x y start accept
+STATES:
+	0 152.000000 258.000000 true false 0.800000 1.000000 1.000000 1.000000
+	1 294.000000 258.000000 false false 0.800000 1.000000 1.000000 1.000000
+	2 898.000000 504.000000 false false 0.980392 0.980392 0.823529 1.000000
+	3 507.000000 246.000000 false false 0.980392 0.980392 0.823529 1.000000
+	4 706.000000 203.000000 false false 0.980392 0.980392 0.823529 1.000000
+	5 878.000000 207.000000 false false 0.980392 0.980392 0.823529 1.000000
+	6 1035.000000 188.000000 false false 0.980392 0.980392 0.823529 1.000000
+	7 1223.000000 201.000000 false false 0.980392 0.980392 0.823529 1.000000
+	8 1460.000000 226.000000 false false 0.980392 0.980392 0.823529 1.000000
+	9 1550.000000 222.000000 false false 0.980392 0.980392 0.823529 1.000000
+	10 1550.000000 500.000000 false false 0.980392 0.980392 0.823529 1.000000
+	11 1263.000000 601.000000 false false 0.980392 0.980392 0.823529 1.000000
+	12 1441.000000 704.000000 false false 0.980392 0.980392 0.823529 1.000000
+	13 1496.000000 854.000000 false false 0.980392 0.980392 0.823529 1.000000
+	14 1266.000000 832.000000 false false 0.980392 0.980392 0.823529 1.000000
+	15 669.000000 567.000000 false false 0.980392 0.980392 0.823529 1.000000
+	16 469.000000 568.000000 false true 0.980392 0.980392 0.823529 1.000000
+	17 1050.000000 45.000000 false false 0.980392 0.980392 0.823529 1.000000
+
+// Transition format: fromStateId toStateId readCHar writeChar moveDirection
+// The Character '~' is the catchall character
+TRANSITION:
+	0 1   | LEFT
+	0 0 ( ( RIGHT
+	0 0 ) ) RIGHT
+	0 0 + + RIGHT
+	0 0 - - RIGHT
+	0 0 * * RIGHT
+	0 0 / / RIGHT
+	0 0 0 # RIGHT
+	0 0 1 # RIGHT
+	0 0 2 # RIGHT
+	0 0 3 # RIGHT
+	0 0 4 # RIGHT
+	0 0 5 # RIGHT
+	0 0 6 # RIGHT
+	0 0 7 # RIGHT
+	0 0 8 # RIGHT
+	0 0 9 # RIGHT
+	1 2     RIGHT
+	2 3 ( x RIGHT
+	3 3 ( ( RIGHT
+	3 3 ) ) RIGHT
+	3 3 + + RIGHT
+	3 3 - - RIGHT
+	3 3 * * RIGHT
+	3 3 / / RIGHT
+	3 3 # # RIGHT
+	3 3 e e RIGHT
+	3 3 y y RIGHT
+	3 3 | | RIGHT
+	3 4   ( LEFT
+	4 4 ( ( LEFT
+	4 4 ) ) LEFT
+	4 4 + + LEFT
+	4 4 - - LEFT
+	4 4 * * LEFT
+	4 4 / / LEFT
+	4 4 # # LEFT
+	4 4 e e LEFT
+	4 4 y y LEFT
+	4 4 | | LEFT
+	4 2 x x RIGHT
+	2 5 # x RIGHT
+	5 6     LEFT
+	5 5 ( ( RIGHT
+	5 5 ) ) RIGHT
+	5 5 + + RIGHT
+	5 5 - - RIGHT
+	5 5 * * RIGHT
+	5 5 / / RIGHT
+	5 5 # # RIGHT
+	5 5 e e RIGHT
+	5 5 y y RIGHT
+	5 5 | | RIGHT
+	6 7 e y LEFT
+	6 7 y y LEFT
+	7 7 ( ( LEFT
+	7 7 ) ) LEFT
+	7 7 + + LEFT
+	7 7 - - LEFT
+	7 7 * * LEFT
+	7 7 / / LEFT
+	7 7 # # LEFT
+	7 7 e e LEFT
+	7 7 y y LEFT
+	7 7 | | LEFT
+	7 2 x x RIGHT
+	2 8 + x RIGHT
+	8 8 ( ( RIGHT
+	8 8 ) ) RIGHT
+	8 8 + + RIGHT
+	8 8 - - RIGHT
+	8 8 * * RIGHT
+	8 8 / / RIGHT
+	8 8 # # RIGHT
+	8 8 e e RIGHT
+	8 8 y y RIGHT
+	8 8 | | RIGHT
+	8 9     LEFT
+	9 10 y e LEFT
+	10 10 ( ( LEFT
+	10 10 ) ) LEFT
+	10 10 + + LEFT
+	10 10 - - LEFT
+	10 10 * * LEFT
+	10 10 / / LEFT
+	10 10 # # LEFT
+	10 10 e e LEFT
+	10 10 y y LEFT
+	10 10 | | LEFT
+	10 2 x x RIGHT
+	2 8 - x RIGHT
+	2 8 * x RIGHT
+	2 8 / x RIGHT
+	2 11 ) x RIGHT
+	11 11 ( ( RIGHT
+	11 11 ) ) RIGHT
+	11 11 + + RIGHT
+	11 11 - - RIGHT
+	11 11 * * RIGHT
+	11 11 / / RIGHT
+	11 11 # # RIGHT
+	11 11 e e RIGHT
+	11 11 y y RIGHT
+	11 11 | | RIGHT
+	11 12     LEFT
+	12 13 y   LEFT
+	13 14 (   LEFT
+	14 14 ( ( LEFT
+	14 14 ) ) LEFT
+	14 14 + + LEFT
+	14 14 - - LEFT
+	14 14 * * LEFT
+	14 14 / / LEFT
+	14 14 # # LEFT
+	14 14 e e LEFT
+	14 14 y y LEFT
+	14 14 | | LEFT
+	14 2 x x RIGHT
+	2 15 | | RIGHT
+	15 15 y y RIGHT
+	15 16     RIGHT
+	1 1 | | LEFT
+	1 1 ( ( LEFT
+	1 1 ) ) LEFT
+	1 1 + + LEFT
+	1 1 - - LEFT
+	1 1 * * LEFT
+	1 1 / / LEFT
+	1 1 # # LEFT
+	6 17 | | RIGHT
+	17 7   y LEFT
+	6 17 ( ( RIGHT
+	9 10 ( ( LEFT
+	9 10 | | LEFT
+	12 14 (   LEFT
+
+// Tape format: tapeChar(0) tapeChar(1) ... tapeChar(n)
+TAPE:
+	12
+	 xxxxxxxxx|      
